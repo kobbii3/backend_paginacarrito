@@ -38,7 +38,7 @@
 
     <header>
         <div class="header-content">
-            <h1 class="titulo-tienda">K-store</h1><br>
+            <h1 class="titulo-tienda">Album store</h1><br>
             <div class="carrito">
             <form method="post" action="">
                     <!-- Cambia el tipo de botón a submit para enviar el formulario -->
@@ -54,7 +54,7 @@
                             }
                         }
                         // Establecer el color del contador
-                        $color_contador = ($total_cantidad >= 1) ? 'green' : 'black';
+                        $color_contador = ($total_cantidad >= 1) ? 'purple' : 'black';
                         echo '<p class="texto-carrito" style="color: ' . $color_contador . ';">[' . $total_cantidad . ']</p>';
                     } else {
                         echo '<p class="texto-carrito">[0]</p>';
@@ -71,13 +71,14 @@
         <div class="product">
             <img src="img/albumkpop.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Stray Kids</h2>
-                <p class="precio">$25.00</p>
+                <h2>5-STAR</h2>
+                <h6>Stray Kids</h6>
+                <p class="precio">$30.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="1">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
-            </div>
+            </div><br>
         </div>
 
 
@@ -87,11 +88,12 @@
         <div class="product">
             <img src="img/albumkpop2.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Twice</h2>
+                <h2>MORE & MORE</h2>
+                <h6>Twice</h6>
                 <p class="precio">$25.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="2">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
 
             </div>
@@ -103,11 +105,12 @@
         <div class="product">
             <img src="img/albumkpop3.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Seventeen</h2>
-                <p class="precio">$25.00</p>
+                <h2>FML</h2>
+                <h6>Seventeen</h6>
+                <p class="precio">$35.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="3">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
             </div>
         </div>
@@ -116,28 +119,30 @@
 
 
         <div class="product">
-            <img src="img/albumkpop3.jpg" alt="Imagen" class="imagen-producto">
+            <img src="img/albumkpop4.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Seventeen</h2>
+                <h2>Taste of Love</h2>
+                <h6>Twice</h6>
                 <p class="precio">$25.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="4">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
-            </div>
+            </div><br>
         </div>
 
 
 
 
         <div class="product">
-            <img src="img/albumkpop2.jpg" alt="Imagen" class="imagen-producto">
+            <img src="img/albumkpop5.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Twice</h2>
-                <p class="precio">$25.00</p>
+                <h2>Proof</h2>
+                <h6>BTS</h6>
+                <p class="precio">$60.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="5">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
             </div>
         </div>
@@ -146,13 +151,14 @@
 
 
         <div class="product">
-            <img src="img/albumkpop.jpg" alt="Imagen" class="imagen-producto">
+            <img src="img/albumkpop6.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
-                <h2>Stray Kids</h2>
-                <p class="precio">$25.00</p>
+                <h2>Formula of Love</h2>
+                <h6>Twice</h6>
+                <p class="precio">$30.00</p>
                 <form method="post" action="cart.php">
                     <input type="hidden" name="product_id" value="6">
-                    <button type="submit" name="add_to_cart">Añadir al carrito</button>
+                    <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
             </div>
         </div>

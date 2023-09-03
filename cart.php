@@ -28,12 +28,12 @@ if (isset($_POST['add_to_cart'])) {
 
     // Obtener información del producto (esto podría provenir de una base de datos)
     $productos = array(
-        1 => array("titulo" => "Stray Kids", "precio" => 25.00),
-        2 => array("titulo" => "Twice", "precio" => 25.00),
-        3 => array("titulo" => "Seventeen", "precio" => 25.00),
-        4 => array("titulo" => "Seventeen", "precio" => 25.00),
-        5 => array("titulo" => "Twice", "precio" => 25.00),
-        6 => array("titulo" => "Stray Kids", "precio" => 25.00)
+        1 => array("titulo" => "Stray Kids / 5-STAR", "precio" => 30.00),
+        2 => array("titulo" => "Twice / MORE & MORE", "precio" => 25.00),
+        3 => array("titulo" => "Seventeen / FML", "precio" => 35.00),
+        4 => array("titulo" => "Twice / Taste of Love", "precio" => 25.00),
+        5 => array("titulo" => "BTS / Proof", "precio" => 60.00),
+        6 => array("titulo" => "Twice / Formula of Love", "precio" => 30.00)
     );
 
     if (array_key_exists($product_id, $productos)) {
