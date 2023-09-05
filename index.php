@@ -40,7 +40,7 @@
         <div class="header-content">
             <h1 class="titulo-tienda">Album store</h1><br>
             <div class="carrito">
-            <form method="post" action="">
+                <form method="post" action="">
                     <!-- Cambia el tipo de botón a submit para enviar el formulario -->
                     <input type="hidden" name="open_cart_modal" value="1">
                     <img src="img/carritocompras.png" alt="carrito" class="logo-carrito" style="cursor: pointer;" id="openCartModal">
@@ -138,10 +138,10 @@
             <img src="img/albumkpop5.jpg" alt="Imagen" class="imagen-producto">
             <div class="info-producto">
                 <h2>Proof</h2>
-                <h6>BTS</h6>
+                <h6 class="artista">BTS</h6>
                 <p class="precio">$60.00</p>
                 <form method="post" action="cart.php">
-                    <input type="hidden" name="product_id" value="5">
+                    <input type="hidden" name="product_id" class="id" value="5">
                     <button type="submit" name="add_to_cart" class="boton">Añadir al carrito</button>
                 </form>
             </div>
@@ -202,8 +202,6 @@
 </script>
 
 
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el parámetro 'producto_eliminado' está en la URL
@@ -216,10 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 </script>
-
-
-
-
 
 </body>
 </html>

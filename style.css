@@ -16,6 +16,9 @@ header {
     display: flex;
     align-items: center;
 }
+.product{
+    margin-left: 20px;
+}
 
 h1.titulo-tienda {
     font-family: 'Montserrat', sans-serif;
@@ -257,4 +260,8 @@ a.btn-secondary:hover {
 
 a.btn-close {
     color: #fff; /* Icono de cierre en la esquina superior derecha */
+}
+.btn-primary {
+    background-color: #8247bc; /* Fondo azul */
+    border-color: #8247bc; /* Borde azul */
 }

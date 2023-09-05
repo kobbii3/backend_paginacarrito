@@ -28,12 +28,12 @@ if (isset($_POST['add_to_cart'])) {
 
     // Obtener información del producto (esto podría provenir de una base de datos)
     $productos = array(
-        1 => array("titulo" => "Stray Kids / 5-STAR", "precio" => 30.00),
-        2 => array("titulo" => "Twice / MORE & MORE", "precio" => 25.00),
-        3 => array("titulo" => "Seventeen / FML", "precio" => 35.00),
-        4 => array("titulo" => "Twice / Taste of Love", "precio" => 25.00),
-        5 => array("titulo" => "BTS / Proof", "precio" => 60.00),
-        6 => array("titulo" => "Twice / Formula of Love", "precio" => 30.00)
+        1 => array("titulo" => "Stray Kids / 5-STAR", "precio" => 30.00, "imagen" => 'albumkpop' ),
+        2 => array("titulo" => "Twice / MORE & MORE", "precio" => 25.00, "imagen" => 'albumkpop2'),
+        3 => array("titulo" => "Seventeen / FML", "precio" => 35.00, "imagen" => 'albumkpop3'),
+        4 => array("titulo" => "Twice / Taste of Love", "precio" => 25.00, "imagen" => 'albumkpop4'),
+        5 => array("titulo" => "BTS / Proof", "precio" => 60.00, "imagen" => 'albumkpop5'),
+        6 => array("titulo" => "Twice / Formula of Love", "precio" => 30.00, "imagen" => 'albumkpop6')
     );
 
     if (array_key_exists($product_id, $productos)) {
@@ -57,6 +57,7 @@ if (isset($_POST['add_to_cart'])) {
                 'product_id' => $product_id,
                 'titulo' => $product_info['titulo'],
                 'precio' => $product_info['precio'],
+                'imagen' => $product_info['imagen'],
                 'cantidad' => 1
             );
         }
@@ -66,4 +67,3 @@ if (isset($_POST['add_to_cart'])) {
 // Redirigir de nuevo a la página de inicio
 header("Location: index.php");
 ?>
-

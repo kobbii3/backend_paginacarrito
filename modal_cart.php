@@ -16,14 +16,16 @@
                                 <?php
                                 $product_name = $producto['titulo'];
                                 $product_price = $producto['precio'];
+                                $product_img = $producto['imagen'];
                                 $product_quantity = $producto['cantidad'];
+                                $product_id = $producto['product_id'];
                                 $product_total_price = $product_price * $product_quantity;
                                 $total += $product_total_price;
                                 ?>
                                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                                     <div class="row col-12">
                                         <div class="col-6 p-0" style="text-align: left; color: #000000;">
-                                            <h6 class="my-0">Cantidad: <?php echo $product_quantity; ?> : <?php echo $product_name; ?></h6>
+                                            <h6 class="my-0">Cantidad: <?php echo $product_quantity; ?>. <?php echo '<br>'.$product_name; ?></h6>
                                         </div>
                                         <div class="col-3 p-0" style="text-align: right; color: #000000;">
                                             <span class="text-muted" style="text-align: right; color: #000000;"><?php echo number_format($product_total_price, 2); ?> USD</span>
@@ -47,13 +49,32 @@
             </div>
             <div class="modal-footer">
                 <a type="button" class="btn btn-danger" href="borrarcarro.php">Vaciar carrito</a>
-                <a type="button" class="btn btn-primary" href="index.php">Generar orden</a>
+                <a type="button" class="btn btn-primary" href="generar_orden.php" id="openResumen">Generar orden</a>
                 <a type="button" class="btn btn-secondary" href="index.php">Cerrar</a>
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
             </div>
         </div>
     </div>
 <!-- MODIFICACIÓN PARA QUITAR PRODUCTOS -->
+
+
+<?php
+
+    // Verificar si se hizo clic en la imagen del carrito
+    if (isset($_POST['open_resumen'])) {
+        $showResumen = true;
+    } else {
+        $showResumen = false;
+    }
+    ?>
+
+    <?php 
+
+    //include("../Admin/navbar.php"); 
+    //include("nav_cart.php"); 
+    include("generar_orden.php");
+
+    ?>
 
     <script>
         function removeItem(productIndex) {
@@ -73,7 +94,28 @@
     </script>
     <!-- FIN DE MODIFICACIÓN PARA QUITAR PRODUCTOS -->
 
+    <script>
+    document.getElementById('openResumen').addEventListener('click', function (e) {
+    e.preventDefault(); // Evita la recarga de la página
+    // Abre la ventana modal aquí (usando JavaScript)
+    $('#resumen').modal('show');
+    });
+    </script>
+
+    
+    <script>
+    // Definir la función para abrir la ventana modal
+    function openResumen() {
+        // Abre la ventana modal usando jQuery
+        $('#resumen').modal('show'); 
+    }
+
+    // Asignar el evento click al botón del carrito para llamar a la función
+    document.getElementById('openResumen').addEventListener('click', function (e) {
+        e.preventDefault(); // Evita la recarga de la página
+        openResumen(); // Abre la ventana modal aquí (usando JavaScript)
+    });
+    </script>
+
 </div>
 <!-- END MODAL CARRITO -->
-
-
