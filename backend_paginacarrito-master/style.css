@@ -1,0 +1,261 @@
+body, h1, h2, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #0d0a11;
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+    padding: 15px;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+h1.titulo-tienda {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 35%;
+    margin-right: 40px;
+}
+
+h2{
+    margin-top: 50px;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #3c1b61);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.carrito {
+    display: flex;
+    align-items: center;
+    
+}
+.logo-carrito {
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-carrito:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+.texto-carrito {
+    font-family: Calibri;
+    font-weight: bold;
+    display: inline-block;
+    color: #000000;
+    font-size: 18px;
+}
+
+.boton{
+    background-color: #0f141b;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color:#fff;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover{
+    background-color: #491d66;
+    transform: scale(1.05);
+    transition: transform 0.7s ease;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+    animation: aparecer 1s ease forwards;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.contenedor>div{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: transform 0.7s ease;
+}
+.contenedor>div:hover{
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #e4cefd);
+    transform: scale(1.05);
+
+}
+
+.info-producto{
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 8px;
+}
+.info-producto .precio{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.imagen-producto {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+/* CSS para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Estilo para el modal del carrito */
+#cart-modal {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #3c1b61; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item:last-child {
+    border-bottom: 1px solid #dee2e6; /* Línea divisoria en el último elemento de la lista */
+}
+
+.modal-footer {
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Estilo para los botones en el modal */
+a.btn {
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+a.btn-primary {
+    background-color: #8247bc; /* Fondo azul */
+    border-color: #8247bc; /* Borde azul */
+}
+
+
+a.btn-primary:hover {
+    background-color: #ac5aff; /* Fondo azul más oscuro al pasar el cursor */
+    border-color: #ac5aff; /* Borde azul más oscuro al pasar el cursor */
+}
+
+a.btn-danger {
+    background-color: #dc3545; /* Fondo rojo */
+    border-color: #dc3545; /* Borde rojo */
+}
+
+a.btn-danger:hover {
+    background-color: #c3004b; /* Fondo rojo más oscuro al pasar el cursor */
+    border-color: #c3004b; /* Borde rojo más oscuro al pasar el cursor */
+}
+
+a.btn-secondary {
+    background-color: #617280; /* Fondo gris */
+    border-color: #617280; /* Borde gris */
+}
+
+a.btn-secondary:hover {
+    background-color: #485d6e; /* Fondo gris más oscuro al pasar el cursor */
+    border-color: #485d6e; /* Borde gris más oscuro al pasar el cursor */
+}
+
+a.btn-close {
+    color: #fff; /* Icono de cierre en la esquina superior derecha */
+}
