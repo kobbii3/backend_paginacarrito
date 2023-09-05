@@ -3,11 +3,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Formulario de Pago</h5>
             </div>
             <div class="modal-body">
                 <!-- FORMULARIO DE PAGO -->
-                <h2>Formulario de Pago</h2>
+                <h2>Datos Bancarios</h2>
                 <form id="formulario-pago">
                     <label for="nombre">Nombre en la Tarjeta:</label>
                     <input type="text" id="nombre" name="nombre" required><br><br>

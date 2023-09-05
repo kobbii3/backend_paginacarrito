@@ -118,4 +118,31 @@
     </script>
 
 </div>
-<!-- END MODAL CARRITO -->
+
+<!-- END MODAL CARRITO FUNCION CARRITO VACIO -->
+<script>
+    document.getElementById('openResumen').addEventListener('click', function (e) {
+        e.preventDefault(); // Evita la recarga de la página
+
+        // Verificar si el carrito está vacío
+        if (isCartEmpty()) {
+            // Mostrar una alerta si el carrito está vacío
+            alert('El carrito está vacío. Agrega productos antes de generar una orden.');
+        } else {
+            // Si el carrito no está vacío, abre la ventana modal
+            openResumen();
+        }
+    });
+
+    // Función para verificar si el carrito está vacío
+    function isCartEmpty() {
+        var cartItems = document.querySelectorAll('.list-group-item');
+        return cartItems.length <= 1; // El valor 1 se refiere al elemento "No hay productos en el carrito."
+    }
+
+    // Definir la función para abrir la ventana modal
+    function openResumen() {
+        // Abre la ventana modal usando jQuery
+        $('#resumen').modal('show'); 
+    }
+</script>
