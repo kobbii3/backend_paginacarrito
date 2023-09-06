@@ -25,16 +25,11 @@
     ?>
 
     <?php 
-
-    //include("../Admin/navbar.php"); 
-    //include("nav_cart.php"); 
     include("modal_cart.php");
-
     ?>
 
     </head>
     <body>
-
 
     <header>
         <div class="header-content">
@@ -63,7 +58,6 @@
                 </form>
             </div>
             </div>
-            
     </header>
 
 
